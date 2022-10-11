@@ -1,0 +1,210 @@
+@import 'variables';
+@import 'base';
+@import 'typography';
+
+$bp-medium: 43.8rem; // 700px
+$bp-small: 30rem; // 490px
+
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 3rem;
+  width: 80rem;
+  height: 58rem;
+
+  display: grid;
+  grid-template-rows: 45% 55%;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    margin: 1.5rem;
+    height: auto;
+  }
+}
+
+.joc-box {
+  background-color: #fff;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  padding: 4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 2rem;
+    grid-column: 1 / 2;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color-cyan;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2.6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
+    }
+  }
+
+  &__money-back {
+    font-size: 2.4rem;
+    color: $color-bright-yellow;
+    margin-top: 1.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.9rem;
+    color: $color-rayish-blue;
+    margin-top: 1rem;
+    width: 95%;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.subscription {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  background-color: $color-cyan;
+  padding: 4rem;
+  color: #fff;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-row: 2 / 3;
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__price-box {
+    display: flex;
+
+    &--price {
+      color: #fff;
+      font-size: 4rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 3.4rem;
+      }
+    }
+
+    p {
+      align-self: center;
+      margin-left: 1.2rem;
+      font-size: 2.8rem;
+      color: $color-light-gray;
+      font-weight: 400;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.9rem;
+    font-weight: 300;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__btn {
+    color: #fff;
+    background-color: $color-bright-yellow;
+    width: 100%;
+    margin-top: 4rem;
+    padding: 1.8rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.8rem 1.5rem rgba(#000, 0.2);
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.6rem;
+      padding: 1.2rem;
+    }
+  }
+
+  &__btn:hover {
+    filter: brightness(105%);
+    box-shadow: 0.6rem 1rem 1.7rem rgba(#000, 0.2);
+  }
+}
+
+.why-us {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  background-color: $color-cyan-light;
+  padding: 4rem;
+  color: #fff;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__benefits {
+    list-style: none;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: $color-light-gray;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.3rem;
+    }
+  }
+}
